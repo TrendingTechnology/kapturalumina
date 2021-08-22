@@ -1,0 +1,20 @@
+{
+  "conventionalCommits.scopes": [
+    "achievements",
+    "android",
+    "auth",
+    "components",
+    "constants",
+    "functions",
+    "helpers",
+    "layout",
+    "models",
+    "notification",
+    "pages",
+    "providers",
+    "routings",
+    "sidemenu",
+    "theme",
+    "ui",
+  ]
+}
