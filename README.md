@@ -114,5 +114,6 @@ App Theme color inspired by Dracula Theme color palette
   - [Capacitor](https://capacitor.ionicframework.com/docs/)
   - [Android App Version Number](https://www.freakyjolly.com/change-version-number-of-app-in-android-studio/#.XtM01TPiuHs)
   - [TypeScript - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+  - [Android Build Keystore](https://developer.android.com/studio/publish/app-signing?hl=id#secure-shared-keystore)
 </details>
 
