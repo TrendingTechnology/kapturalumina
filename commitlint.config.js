@@ -7,6 +7,7 @@ const CommitLintConfigurations = {
       "always",
       [
         "404",
+        "android",
         "auth",
         "components",
         "constants",
