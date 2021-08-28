@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import {
   IonMenu,
   IonContent,
@@ -20,12 +19,13 @@ import {
   personAddSharp,
   moon,
 } from "ionicons/icons";
+import { useContext } from "react";
 import { useHistory } from "react-router";
 
-import { AuthContext, ThemeContext } from "../providers";
+import { FocusRafiki } from "assets";
 import { logoutUser } from "functions/firebase";
 
-import { FocusRafiki } from "assets";
+import { AuthContext, ThemeContext } from "../providers";
 import "./SideMenu.css";
 
 const SideMenu = () => {

@@ -1,4 +1,3 @@
-import { useState, useContext } from "react";
 import {
   IonPage,
   IonContent,
@@ -13,13 +12,13 @@ import {
   IonText,
   IonLoading,
 } from "@ionic/react";
+import { useState, useContext } from "react";
 import { Redirect, useHistory } from "react-router";
-
-import { AuthContext } from "components/providers";
-import { loginUser, requestPasswordReset } from "functions/firebase";
 
 import { FocusRafiki } from "assets";
 import ForgotPasswordModal from "components/auth/ForgotPasswordModal";
+import { AuthContext } from "components/providers";
+import { loginUser, requestPasswordReset } from "functions/firebase";
 
 const LoginPage = () => {
   const [wait, setWait] = useState<boolean>(false);
@@ -27,9 +26,8 @@ const LoginPage = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const [isModalResetPasswordOpen, setIsModalResetPasswordOpen] = useState<
-    boolean
-  >(false);
+  const [isModalResetPasswordOpen, setIsModalResetPasswordOpen] =
+    useState<boolean>(false);
 
   const history = useHistory();
 

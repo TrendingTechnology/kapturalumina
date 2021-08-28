@@ -1,4 +1,3 @@
-import { useContext, useState, useEffect } from "react";
 import {
   IonContent,
   IonHeader,
@@ -19,14 +18,14 @@ import {
   IonText,
   IonProgressBar,
 } from "@ionic/react";
+import { useContext, useState, useEffect } from "react";
 
+import { HelloRafiki } from "assets";
 import {
   LearnContext,
   UserProgressContext,
   UserProfileContext,
 } from "components/providers";
-
-import { HelloRafiki } from "assets";
 
 const Home = () => {
   const { chapters } = useContext(LearnContext);

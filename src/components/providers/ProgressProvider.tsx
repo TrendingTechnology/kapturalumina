@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext, createContext } from "react";
 
+import { fbase, getCurrentUser } from "functions/firebase";
+import { Progress } from "models";
+
 import Loader from "../Loader";
 
 import { AuthContext } from "./AuthProvider";
-import { fbase, getCurrentUser } from "functions/firebase";
-
-import { Progress } from "models";
 
 export const UserProgressContext = createContext({
   progress: [] as Progress[],

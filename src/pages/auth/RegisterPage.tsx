@@ -1,4 +1,3 @@
-import { useState, useContext } from "react";
 import {
   IonPage,
   IonTitle,
@@ -15,14 +14,13 @@ import {
   IonIcon,
 } from "@ionic/react";
 import { person, mail, key, keyOutline } from "ionicons/icons";
+import { useState, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 
-import { presentToast } from "components/Toast";
-import { AuthContext } from "components/providers";
-
-import { registerUser } from "functions/firebase";
-
 import { FocusBro } from "assets";
+import { AuthContext } from "components/providers";
+import { presentToast } from "components/Toast";
+import { registerUser } from "functions/firebase";
 
 const RegisterPage = () => {
   const [wait, setWait] = useState<boolean>(false);

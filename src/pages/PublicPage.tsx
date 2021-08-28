@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import {
   IonContent,
   IonToolbar,
@@ -9,6 +8,7 @@ import {
   IonPage,
   IonButton,
 } from "@ionic/react";
+import { useContext } from "react";
 import { Redirect } from "react-router";
 
 import { AuthContext } from "components/providers/AuthProvider";

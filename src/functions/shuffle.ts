@@ -1,7 +1,7 @@
 export const shuffleSet = (array: any[], pick?: number) => {
   // Modern Fisher-Yates Shuffle Algorithm
 
-  let res = [...array];
+  const res = [...array];
   // arr remain unchanged
   let range = res.length;
 

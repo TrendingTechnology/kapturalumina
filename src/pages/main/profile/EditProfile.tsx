@@ -1,4 +1,3 @@
-import { useContext, useState, useEffect } from "react";
 import {
   IonList,
   IonListHeader,
@@ -16,11 +15,11 @@ import {
   IonTextarea,
   IonLoading,
 } from "@ionic/react";
+import { useContext, useState, useEffect } from "react";
 import { useHistory } from "react-router";
 
 import { UserProfileContext } from "components/providers";
 import { presentToast } from "components/Toast";
-
 import { updateUserProfile } from "functions/firebase";
 
 const EditProfile = () => {
@@ -103,7 +102,6 @@ const EditProfile = () => {
               maxlength={80}
               placeholder={"Deskripsi singkat"}
               autoGrow
-              onChange={() => {}}
             />
           </IonItem>
         </IonList>

@@ -1,4 +1,3 @@
-import { useContext, useEffect, useState, useRef } from "react";
 import {
   IonPage,
   IonHeader,
@@ -26,17 +25,16 @@ import {
   IonLoading,
 } from "@ionic/react";
 import { chevronBack, chevronForward, checkmarkCircle } from "ionicons/icons";
+import { useContext, useEffect, useState, useRef } from "react";
 import { useHistory, useParams } from "react-router";
 
-import { LearnContext } from "components/providers";
 import ErrorContent from "components/ErrorContent";
+import { LearnContext } from "components/providers";
 import SubModuleSlideImage from "components/SubModuleSlideImage";
-
 import {
   updateUserLearnProgress,
   updateUserLeaderBoardPoints,
 } from "functions/firebase";
-
 import { Chapter, SubModule } from "models";
 
 const SubModulePage = () => {

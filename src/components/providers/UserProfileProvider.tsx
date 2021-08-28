@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext, createContext } from "react";
 
+import { fbase, getCurrentUser } from "functions/firebase";
+import { UserData } from "models";
+
 import Loader from "../Loader";
 
-import { fbase, getCurrentUser } from "functions/firebase";
 import { AuthContext } from ".";
-
-import { UserData } from "models";
 
 const initialUser: UserData = {
   id: "abcde",
@@ -18,7 +18,7 @@ export const UserProfileContext = createContext({
   user: initialUser,
 });
 
-export const UserProfileProvider = ({ children }: any, props: any) => {
+export const UserProfileProvider = ({ children }: any) => {
   const [userProfile, setUserProfile] = useState<UserData>(initialUser);
   const [busy, setBusy] = useState<boolean>(true);
 

@@ -1,5 +1,3 @@
-import Avatar from "boring-avatars";
-import { useState } from "react";
 import {
   IonGrid,
   IonRow,
@@ -12,14 +10,15 @@ import {
   IonIcon,
   IonCard,
 } from "@ionic/react";
+import Avatar from "boring-avatars";
 import { logoInstagram, logoYoutube, globeOutline } from "ionicons/icons";
-
-import AchievementsWrapper from "./achievements/AchievementsWrapper";
-import AchievementModal from "./achievements/AchievementModal";
+import { useState } from "react";
 
 import { removeFollowedFriend, followAsFriend } from "functions/firebase";
-
 import { UserData, Leaderboard, Achievement } from "models";
+
+import AchievementModal from "./achievements/AchievementModal";
+import AchievementsWrapper from "./achievements/AchievementsWrapper";
 
 type ProfileWrapperProps = {
   mainMenu?: boolean;

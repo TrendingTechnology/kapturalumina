@@ -1,3 +1,5 @@
+import { App } from "@capacitor/app";
+import { AppMinimize } from "@ionic-native/app-minimize";
 import {
   IonApp,
   IonSplitPane,
@@ -22,10 +24,6 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
-// Native Plugins
-import { App } from "@capacitor/app";
-import { AppMinimize } from "@ionic-native/app-minimize";
-
 // Components / Wrappers
 import {
   AuthProvider,
@@ -34,8 +32,8 @@ import {
   UserProgressProvider,
   ThemeProvider,
 } from "components/providers";
-import SideMenu from "components/sidemenu/SideMenu";
 import Routing from "components/routings/Routing";
+import SideMenu from "components/sidemenu/SideMenu";
 
 // Global CSS
 import "@fontsource/inter/latin.css";
@@ -57,8 +55,8 @@ const KapturaLumina = () => {
   useIonViewDidEnter(() => {
     document.addEventListener(
       "backbutton",
-      function (e) {
-        console.log("disable back button");
+      () => {
+        return;
       },
       false
     );

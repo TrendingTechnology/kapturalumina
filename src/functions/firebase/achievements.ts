@@ -1,25 +1,26 @@
-import { fbase, getCurrentUser, leaderboard, usersData } from "./index";
-import { Achievement, Chapter } from "models";
 import { presentToast } from "components/Toast";
+import { Achievement, Chapter } from "models";
+
+import { fbase, getCurrentUser, leaderboard, usersData } from "./index";
 
 export const achievements = fbase.database().ref("achievements");
 
 export const updateUserAchievements = (
-  chapterId: string,
+  _chapterId: string,
   moduleId: string,
   addedChapterProgress: boolean,
   addedModuleProgress: boolean,
   streak?: number,
-  passed?: boolean
+  _passed?: boolean
 ) => {
   const user = getCurrentUser();
   let chapters: Chapter[] = [];
   let achievementsCatalog: Achievement[] = [];
 
-  let streakAchievements: Achievement[] = [];
-  let quizAchievements: Achievement[] = [];
-  let moduleAchievements: Achievement[] = [];
-  let chapterAchievements: Achievement[] = [];
+  const streakAchievements: Achievement[] = [];
+  const quizAchievements: Achievement[] = [];
+  const moduleAchievements: Achievement[] = [];
+  const chapterAchievements: Achievement[] = [];
 
   let getAchievements: number = 0;
 
@@ -209,8 +210,8 @@ export const updateUserAchievements = (
 
 export const UpdateUserLeaderBoardAchievements = () => {
   const user = getCurrentUser();
-  let dailyUseAchievements: Achievement[] = [];
-  let dailyPointsAchievements: Achievement[] = [];
+  const dailyUseAchievements: Achievement[] = [];
+  const dailyPointsAchievements: Achievement[] = [];
 
   let dailyUseAch = false;
   let dailyPointAch = false;

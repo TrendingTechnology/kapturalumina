@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   IonPage,
   IonHeader,
@@ -9,18 +8,17 @@ import {
   IonBackButton,
   IonLoading,
 } from "@ionic/react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-import { presentToast } from "components/Toast";
 import Profilewrapper from "components/ProfileWrapper";
-
+import { presentToast } from "components/Toast";
 import {
   usersData,
   leaderboard,
   getCurrentUser,
   achievements,
 } from "functions/firebase";
-
 import { Leaderboard, UserData, Achievement } from "models";
 
 const UserProfile = () => {
@@ -41,8 +39,8 @@ const UserProfile = () => {
   useEffect(() => {
     if (currentLoggedInUser) {
       usersData.on("value", (snap: any) => {
-        let userAchievements: Achievement[] = [];
-        let userAchievementLists: any[] = [];
+        const userAchievements: Achievement[] = [];
+        const userAchievementLists: any[] = [];
         setUser(undefined);
         setLoggedInUser(false);
         setAddedAsFriend(false);

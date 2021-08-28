@@ -1,5 +1,3 @@
-import Avatar from "boring-avatars";
-import { useEffect, useState } from "react";
 import {
   IonPage,
   IonHeader,
@@ -12,7 +10,6 @@ import {
   IonList,
   IonItem,
   IonAvatar,
-  IonImg,
   IonText,
   IonLabel,
   IonRow,
@@ -21,13 +18,13 @@ import {
   IonCol,
   IonLoading,
 } from "@ionic/react";
-
-import { leaderboard, usersData, getCurrentUser } from "functions/firebase";
-import { getCurrentDate } from "functions";
-
-import { Leaderboard } from "models";
+import Avatar from "boring-avatars";
+import { useEffect, useState } from "react";
 
 import { WinnersPana } from "assets";
+import { getCurrentDate } from "functions";
+import { leaderboard, usersData, getCurrentUser } from "functions/firebase";
+import { Leaderboard } from "models";
 
 const Leaderboards = () => {
   const [filterUser, setFilterUser] = useState<"global" | "friends">("global");
@@ -79,7 +76,7 @@ const Leaderboards = () => {
       // Followed Friend
       const user = getCurrentUser();
       if (filterTime === "all-time") {
-        let leaderBoardData: Leaderboard[] = [];
+        const leaderBoardData: Leaderboard[] = [];
         setLeaderboardData([]);
         leaderboard.orderByChild("points").on("value", (snap: any) => {
           snap.forEach((entry: any) => {
@@ -109,7 +106,7 @@ const Leaderboards = () => {
         });
       } else {
         leaderboard.on("value", (snap: any) => {
-          let leaderBoardData: Leaderboard[] = [];
+          const leaderBoardData: Leaderboard[] = [];
           setLeaderboardData([]);
           snap.forEach((entry: any) => {
             const todayPoints = entry.val().dailyPoints.pop();

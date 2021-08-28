@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   IonPage,
   IonHeader,
@@ -9,16 +8,15 @@ import {
   IonContent,
   IonLoading,
 } from "@ionic/react";
+import { useState, useEffect } from "react";
 
 import Profilewrapper from "components/ProfileWrapper";
-
 import {
   getCurrentUser,
   usersData,
   leaderboard,
   achievements,
 } from "functions/firebase";
-
 import { UserData, Achievement, Leaderboard } from "models";
 
 const Profile = () => {
@@ -35,8 +33,8 @@ const Profile = () => {
     const currentUser = getCurrentUser();
     if (currentUser) {
       usersData.child(currentUser.uid).on("value", (snap: any) => {
-        let tempUserAchievement: Achievement[] = [];
-        let tempUserAchievementList: any[] = [];
+        const tempUserAchievement: Achievement[] = [];
+        const tempUserAchievementList: any[] = [];
         setBusy(true);
         if (snap.exists()) {
           setUser(snap.val());

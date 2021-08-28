@@ -1,4 +1,3 @@
-import { useState, useContext, useEffect } from "react";
 import {
   IonPage,
   IonHeader,
@@ -13,18 +12,17 @@ import {
   IonLoading,
   IonText,
 } from "@ionic/react";
+import { useState, useContext, useEffect } from "react";
 import { useParams, useHistory } from "react-router";
 
-import { LearnContext } from "components/providers";
 import ErrorContent from "components/ErrorContent";
+import { LearnContext } from "components/providers";
 import { presentToast } from "components/Toast";
-
 import { shuffleSet } from "functions";
 import {
   updateUserLeaderBoardPoints,
   updateUserLearnProgress,
 } from "functions/firebase";
-
 import { Chapter, Question, Scoring } from "models";
 
 const QuizPage = () => {

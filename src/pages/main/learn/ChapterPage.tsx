@@ -1,4 +1,3 @@
-import { useEffect, useContext, useState } from "react";
 import {
   IonPage,
   IonHeader,
@@ -20,11 +19,11 @@ import {
   IonCol,
 } from "@ionic/react";
 import { playCircle, checkmarkCircle, reloadCircle } from "ionicons/icons";
+import { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router";
 
 import ErrorContent from "components/ErrorContent";
 import { LearnContext, UserProgressContext } from "components/providers";
-
 import { Chapter } from "models";
 
 const ChapterPage = () => {

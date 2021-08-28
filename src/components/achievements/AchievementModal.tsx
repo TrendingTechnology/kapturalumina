@@ -1,7 +1,8 @@
-import { useContext } from "react";
 import { IonModal, IonText, IonButton } from "@ionic/react";
+import { useContext } from "react";
 
 import { Achievement } from "models";
+
 import { ThemeContext } from "../providers";
 
 export type AchievementModalType = {

@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react";
 import {
   IonSlides,
   IonSlide,
@@ -8,6 +7,7 @@ import {
   IonCardTitle,
   IonCardHeader,
 } from "@ionic/react";
+import { useRef, useEffect } from "react";
 
 import { PhotoAmico, FocusAmico, FocusPana } from "assets";
 
